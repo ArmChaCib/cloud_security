@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/get-key', 'KeyApiController@getKey');
 Route::get('/places', function () {
     $faker = Faker\Factory::create();
 
