@@ -15,6 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/places', function () {
+    $faker = Faker\Factory::create();
+
+    for ($i = 0; $i < 100; $i++){
+        for ($j = 0; $j < 100; $j++){
+            \App\Models\Place::create([
+                'name' => $faker->city,
+                'long' => $i,
+                'lat' => $j
+            ]);
+        }
+    }
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
