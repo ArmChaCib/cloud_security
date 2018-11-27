@@ -82,6 +82,10 @@
                     .then((res) => {
                         this.place = res.data.place
                     }, (err) => {
+                        console.log(err.response)
+                        if(err.response.status){
+                            alert(err.response.data)
+                        }
                         console.log('Error al traer el lugar', err)
                     });
             }
