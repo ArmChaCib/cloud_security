@@ -19,6 +19,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('request-key', require('./components/RequestKey'));
+Vue.component('locations-page', require('./components/locations-page'));
+
 
 // const files = require.context('./', true, /\.vue$/i)
 

@@ -15,7 +15,7 @@ class KeyApiController extends Controller
     }
 
     public function getPlace(Request $request){
-        if($request->code)
+        if($request->code == null || $request->code == "")
             return response('Favor de ingresar la llave pública.', 422);
 
         if(!Code::where('code', $request->code)->exists())

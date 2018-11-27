@@ -14024,6 +14024,7 @@ window.Vue = __webpack_require__(37);
 
 Vue.component('example-component', __webpack_require__(40));
 Vue.component('request-key', __webpack_require__(43));
+Vue.component('locations-page', __webpack_require__(55));
 
 // const files = require.context('./', true, /\.vue$/i)
 
@@ -48041,6 +48042,379 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(56)
+}
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = __webpack_require__(58)
+/* template */
+var __vue_template__ = __webpack_require__(59)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-6463c7a9"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/locations-page.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6463c7a9", Component.options)
+  } else {
+    hotAPI.reload("data-v-6463c7a9", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(57);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(47)("141a29e1", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6463c7a9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./locations-page.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6463c7a9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./locations-page.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.justify-center-flex[data-v-6463c7a9] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.bd-img[data-v-6463c7a9] {\n    height: 150px;\n}\n.flex-left[data-v-6463c7a9]{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: left;\n        -ms-flex-pack: left;\n            justify-content: left;\n}\n.flex-right[data-v-6463c7a9]{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.arrow-img[data-v-6463c7a9]{\n    height: 250px;\n}\n.btn-style[data-v-6463c7a9]{\n    background-color: #4CAF50; /* Green */\n    border: none;\n    color: white;\n    padding: 15px 32px;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 16px;\n    cursor: pointer;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {},
+    name: "request-key",
+    data: function data() {
+        return {
+            code: '',
+            long: '',
+            lat: '',
+            place: {}
+        };
+    },
+
+    methods: {
+        getPlace: function getPlace() {
+            var _this = this;
+
+            var data = {
+                code: this.code,
+                long: this.long,
+                lat: this.lat
+            };
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/get-place', data).then(function (res) {
+                _this.place = res.data.place;
+            }, function (err) {
+                console.log('Error al traer el lugar', err);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "card-header" }, [
+      _vm._v("\n        asddasasd\n    ")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-4" }, [
+          _c("span", [_vm._v("Code")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.code,
+                expression: "code"
+              }
+            ],
+            attrs: { type: "text" },
+            domProps: { value: _vm.code },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.code = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-4" }, [
+          _c("span", [_vm._v("Long")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.long,
+                expression: "long"
+              }
+            ],
+            attrs: { type: "text" },
+            domProps: { value: _vm.long },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.long = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-4" }, [
+          _c("span", [_vm._v("Lat")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.lat,
+                expression: "lat"
+              }
+            ],
+            attrs: { type: "text" },
+            domProps: { value: _vm.lat },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.lat = $event.target.value
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6 flex-left" }, [
+          _c("img", {
+            staticClass: "arrow-img",
+            attrs: {
+              src: "https://img.icons8.com/windows/1600/long-arrow-up.png",
+              alt: ""
+            }
+          }),
+          _vm._v(" "),
+          _vm.place.name
+            ? _c("span", [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.place.name) +
+                    "\n                "
+                )
+              ])
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12 justify-center-flex" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn-style",
+              on: {
+                click: function($event) {
+                  _vm.getPlace()
+                }
+              }
+            },
+            [_vm._v("\n                    Ubicación\n                ")]
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12 justify-center-flex" }, [
+        _c("img", {
+          staticClass: "bd-img",
+          attrs: {
+            src:
+              "http://www.prologicwebdesign.com/wp-content/uploads/2015/07/Oracle-Database-support.png",
+            alt: ""
+          }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-6 flex-right" }, [
+      _c("img", {
+        staticClass: "arrow-img",
+        attrs: {
+          src: "https://img.icons8.com/windows/1600/long-arrow-down.png",
+          alt: ""
+        }
+      })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6463c7a9", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
