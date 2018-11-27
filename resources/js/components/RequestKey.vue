@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card-header">
-            asddasasd
+            Generador de llave
         </div>
         <div class="card-body">
             <div class="row">

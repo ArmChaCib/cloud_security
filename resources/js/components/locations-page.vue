@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card-header">
-            asddasasd
+            Localización
         </div>
         <div class="card-body">
             <div class="row">
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-12 justify-center-flex">
                     <img class="bd-img"
-                         src="http://www.prologicwebdesign.com/wp-content/uploads/2015/07/Oracle-Database-support.png"
+                         src="https://www.mancera.org/wp-content/uploads/2011/01/server-icon.png"
                          alt=""
                     >
                 </div>
@@ -48,7 +48,7 @@
                     <button class="btn-style"
                             @click="getPlace()"
                     >
-                        Ubicación
+                        Localización
                     </button>
                 </div>
             </div>

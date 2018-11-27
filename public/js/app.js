@@ -47952,7 +47952,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "card-header" }, [
-      _vm._v("\n        asddasasd\n    ")
+      _vm._v("\n        Generador de llave\n    ")
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [
@@ -48240,7 +48240,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "card-header" }, [
-      _vm._v("\n        asddasasd\n    ")
+      _vm._v("\n        Localización\n    ")
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [
@@ -48362,7 +48362,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                    Ubicación\n                ")]
+            [_vm._v("\n                    Localización\n                ")]
           )
         ])
       ])
@@ -48380,7 +48380,7 @@ var staticRenderFns = [
           staticClass: "bd-img",
           attrs: {
             src:
-              "http://www.prologicwebdesign.com/wp-content/uploads/2015/07/Oracle-Database-support.png",
+              "https://www.mancera.org/wp-content/uploads/2011/01/server-icon.png",
             alt: ""
           }
         })
