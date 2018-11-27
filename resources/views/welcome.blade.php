@@ -11,9 +11,22 @@
 
         <!-- Styles -->
         <style>
+            .bg {
+                /* The image used */
+                background-image: url("http://www.dreamtemplate.com/dreamcodes/bg_images/color/c10.jpg");
+
+                /* Full height */
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #ffffff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -64,7 +77,8 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+
+    <div class="bg flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,7 +95,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    LOCALIZACIONES
+                </div>
+                <div class=" m-b-md">
+                    Obtén la localización de un lugar
                 </div>
 
             </div>
